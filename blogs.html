@@ -36,6 +36,11 @@
                 <h3><strong>Question 3:</strong> How does the event loop work in javascript?</h3>
                 <p><strong>Ans:</strong> The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop. Each event is just a function callback.</p>
             </div>
+            <div class="card">
+                <h3><strong>Question 4:</strong> How to get undefined in javascript?</h3>
+                <p><strong>Ans:</strong> The undefined is a primitive type in JavaScript. So the undefined is a type. And the undefined type has exactly one value that is undefined.</p>
+                <p><strong>1) Accessing an uninitialized variable</strong> <br> When you declare a variable and don’t initialize it to a value, the variable will have a value of undefined. For example: <br>let counter;<br>console.log(counter); // undefined <br> <strong>2) Accessing a non-existing property of an object</strong> <br> If you access a non-existing property of an object, you’ll get undefined. For example: <br>let counter = {current: 0};<br>console.log(counter.max); // undefined <br><strong>3) Function parameters</strong> <br> When you call a function with a number of parameters, you often pass the same number of arguments. For example: <br>const formatCurrency = (amount, currency) => {<br>return currency === '$' ?<br>  `$${amount}`: `${amount} ${currency}`;<br> } <br>formatCurrency(100); // 100 undefined <br><strong>4) Functions return a value</strong> <br> A function that doesn’t have a return statement implicitly returns undefined. For example: <br>const log = (message) => {<br>const time = (new Date()).toLocaleTimeString();<br>console.log(`${time}: ${message}`);<br>};<br>const result = log('Hi');<br>console.log(result); // undefined <br><strong>5) Accessing out-of-bounds array elements</strong> <br> When you access an array element that is out-of-bounds, you’ll get the undefined value. For example: <br>const colors = ['red', 'green', 'blue'];<br>console.log(colors[3]); // undefined</p>
+            </div>
         </section>
     </main>
 </body>
